@@ -45,6 +45,11 @@ button {
     line-height: 30px;
     transition: all .15s ease-in-out;
 }
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
 .hero {
     width: 100%;
     height:100vh;
@@ -127,6 +132,10 @@ button {
     background-color: rgba(255, 255, 255, 0.2) !important;
     padding: .5rem 1.75rem;
 }
+span#toggleMenu-text {
+    position: absolute;
+    opacity: 0;
+}
 .round {
     border-radius: 30px;
 }
@@ -154,7 +163,7 @@ button {
 .landing .content {
     position:relative;
     align-self: center;
-    margin: 0;
+    margin: 0 auto;
     max-width: 46rem;
 }
 .landing .content .title {
@@ -164,9 +173,60 @@ button {
     color: #fff;
 }
 
+.about {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 5.625rem 0rem 0rem;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+.about h6 {
+    font-weight: 900;
+    font-size: 1.125rem;
+    letter-spacing: .2rem;
+    color: #c3c0c0;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.875rem;
+}
+.about p {
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 56.5rem;
+    margin: 0 auto;
 }
 /* Media Queries */
-@media screen and (max-width:767px) {
+@media screen and (max-width:575px) {
+    .landing .content .title {font-size: 2.5rem !important;line-height:40px !important;}
+    .about {padding-top: 2.75rem;}
+    .about h6 {margin-bottom: .9375rem;}
+    .about p {text-align: justify ;}
+    .container {padding: 0 30px;}
+}
+@media screen and (max-width:765px) {
+    .landing .content .title {font-size: 3rem;line-height:50px;}
     .menu-md {
         -ms-flex-direction: row;
         flex-direction: row;
@@ -177,10 +237,31 @@ button {
     }
 }
 
+@media screen and (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
 @media screen and (min-width:768px) {
     .menu-toggler {display: none;}
     .menu-md > .container-fluid {
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    }
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        max-width: 1140px;
     }
 }
