@@ -7,12 +7,21 @@ html {
 }
 body {
     margin: 0;
-    font-family: "Catamaran", san-serif, apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-family: "Catamaran", san-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
     background-color: #fff;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
 }
 [role="button"], a, area, button, input, label, select, summary, textarea {
     -ms-touch-action: manipulation;
@@ -36,6 +45,11 @@ button {
     line-height: 30px;
     transition: all .15s ease-in-out;
 }
+.hero {
+    width: 100%;
+    height:100vh;
+    background: linear-gradient(180deg, #eb5757 0%, #d59152 100%);
+}
 .menu {
     position: relative;
     display: -ms-flexbox;
@@ -46,7 +60,8 @@ button {
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between !important;
-    padding: .5rem 1rem;
+    padding: .9375rem 1rem;
+    letter-spacing: 1px;
 }
 .menu-md {
     -ms-flex-direction: row;
@@ -87,6 +102,7 @@ button {
 .menu-brand:focus, .menu-brand:hover {
     text-decoration: none;
 }
+.menu-brand img {margin-right:.75rem;}
 .menu-center {
     display: -ms-flexbox;
     display: flex;
@@ -109,10 +125,45 @@ button {
     line-height: 23px;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.2) !important;
-    padding: .5rem .75rem;
+    padding: .5rem 1.75rem;
 }
 .round {
     border-radius: 30px;
+}
+.landing {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* height: 25rem; */
+    min-height: 60vh;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 4.75rem;
+    padding-bottom: 5.625rem;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+}
+.landing .content {
+    position:relative;
+    align-self: center;
+    margin: 0;
+    max-width: 46rem;
+}
+.landing .content .title {
+    font-weight: 900;
+    line-height: 67px;
+    font-size: 4rem;
+    color: #fff;
+}
+
 }
 /* Media Queries */
 @media screen and (max-width:767px) {
