@@ -1,0 +1,135 @@
+html {
+    box-sizing: border-box;
+}
+
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Catamaran", san-serif, apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+}
+[role="button"], a, area, button, input, label, select, summary, textarea {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+button {
+    color: #fff;
+    background-color: #fff;
+    border: 2px solid#e36f55;
+    border-radius: 30px;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1.125rem;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .9375rem 3.125rem;
+    line-height: 30px;
+    transition: all .15s ease-in-out;
+}
+.menu {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between !important;
+    padding: .5rem 1rem;
+}
+.menu-md {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.container-fluid {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+.menu > .container-fluid {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.menu-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: .875rem;
+    font-weight: 900;
+    line-height: 22px;
+    white-space: nowrap;
+}
+.menu-brand:focus, .menu-brand:hover {
+    text-decoration: none;
+}
+.menu-center {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.menu-link {
+    display: block;
+    padding: .5rem 1rem;
+    font-size: .875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.menu button {
+    font-weight: 700;
+    font-size: .875rem;
+    line-height: 23px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    padding: .5rem .75rem;
+}
+.round {
+    border-radius: 30px;
+}
+/* Media Queries */
+@media screen and (max-width:767px) {
+    .menu-md {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .menu-toggler {display: none;}
+    .menu-md > .container-fluid {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+}
