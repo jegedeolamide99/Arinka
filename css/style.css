@@ -1,6 +1,9 @@
 html {
     box-sizing: border-box;
     overflow-x: hidden;
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
 }
 
 *,*::before,*::after {
@@ -25,6 +28,7 @@ a {
 a:hover {
     color: #fff;
     text-decoration: none;
+    cursor: pointer;
 }
 [role="button"], a, area, button, input, label, select, summary, textarea {
     -ms-touch-action: manipulation;
@@ -54,15 +58,20 @@ button {
     text-transform: uppercase;
     transition: all .15s ease-in-out;
 }
+button:hover {cursor: pointer;}
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: .5rem;
     line-height: 1.1;
 }
+img {
+    vertical-align: middle;
+    border-style: none;
+}
 
 .hero {
     width: 100%;
-    height:100vh;
+    height:100%;
     background: linear-gradient(180deg, #eb5757 0%, #d59152 100%);
 }
 .menu {
@@ -166,7 +175,6 @@ span#toggleMenu-text {
     width: 100%;
     margin: 0 auto;
     padding-top: 4.75rem;
-    padding-bottom: 5.625rem;
     text-align: center;
     overflow: hidden;
     color: #fff;
@@ -274,9 +282,9 @@ span#toggleMenu-text {
 }
 .card:hover .overlay{
     opacity: .5;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    transition: all 1s;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 .card-image {height: 100%;}
 .location {position: absolute; left: 10%; bottom: 5%; width: 100%;}
@@ -310,9 +318,21 @@ span#toggleMenu-text {
 }
 .mosque .text h6 {font-weight:700; line-height: normal; font-size:1.125rem; letter-spacing: 0.1rem;text-transform: uppercase;}
 .mosque .text h1 {font-weight:700; line-height: 4.8rem; font-size:4.5rem; letter-spacing: 0.1rem; color: #fff; width: 50%;}
+footer {padding: 1.25rem 0rem;}
+footer .row{justify-content: space-between;margin:0 15px;}
+footer span, footer a {font-weight: 700; line-height: normal; font-size: .875rem; color: #a9a9a9;}
+footer a:hover {color: #E36F55; transition: all .2s ease-in-out;}
+
+
 /* Media Queries */
+@media screen and (max-width:359px) {
+    .location h4 {font-size: 1.75rem;}
+    .location p {font-size: 1rem;}
+    footer .row {text-align: center;}
+    footer span {width: 100%;}
+}
 @media screen and (max-width:575px) {
-    .landing .content .title {font-size: 2.5rem !important;line-height:40px !important;}
+    .landing .content .title {font-size: 2.0rem !important;line-height:40px !important;}
     .about {padding-top: 2.75rem;}
     .about h6 {margin-bottom: .9375rem;}
     .about p {text-align: justify; font-size: 1rem !important;}
@@ -320,10 +340,15 @@ span#toggleMenu-text {
     .locations {padding: 2.75rem 0rem;}
     .mosque .text h6 {font-size: 1rem;}
     .mosque .text h1 {width: 100% !important;}
+    
 }
 @media screen and (max-width:767px) {
     .landing .content .title {font-size: 3rem;line-height:50px;}
     .about p {font-size: 1.25rem;}
+    .menu-expand > .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 @media screen and (max-width:991px) { 
     .card {height: 18.75rem;}
