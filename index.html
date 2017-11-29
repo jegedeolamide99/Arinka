@@ -15,10 +15,10 @@
 </head>
 <body>
     <div class="hero">
-        <nav class="navbar navbar-expand-md menu menu-md">
+        <nav class="navbar navbar-expand-md menu menu-expand">
             <div class="container-fluid">
                 <a class="navbar-brand menu-brand" href="#">
-                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_auto,c_scale/logo.png" src="img/logo.png" class="cld-responsive">ARINKA
+                    <img data-src="https://res.cloudinary.com/harryola9/dpr_auto,c_scale,f_auto/logo.png" src="img/logo.png" class="cld-responsive">ARINKA
                 </a>
                 <button class="menu-toggler">
                     <a href="#">
@@ -29,9 +29,9 @@
                     </a>
                 </button>
                 <ul class="navbar nav menu menu-center">
-                    <li class="nav-item menu-item"><a class="nav-link menu-link" href="#">locations</a></li>
-                    <li class="nav-item menu-item"><a class="nav-link menu-link" href="#">moods</a></li>
-                    <li class="nav-item menu-item"><a class="nav-link menu-link" href="#">blogs</a></li>
+                    <li><a class="nav-link menu-link" href="#">locations</a></li>
+                    <li><a class="nav-link menu-link" href="#">moods</a></li>
+                    <li><a class="nav-link menu-link" href="#">blogs</a></li>
                 </ul>
                 <button>LOGIN / SIGNUP</button>
             </div>
@@ -48,10 +48,68 @@
     
     <!-- about us -->
     <div class="about">
-        <div class="row">
-            <div class="container">
-                <h6>About us</h6>
-                <p>Arinka is a fictional company, but actually a real idea someone had sometime in the past. In 1985, Aldus Corporation launched its first desktop publishing program: Aldus Pagemaker for Apple Macintosh computers, released in 1987 for PCs running Windows 1.0. Both contained the variant lorem ipsum most common today. </p>
+        <div class="container">
+            <h6>About us</h6>
+            <p>Arinka is a fictional company, but actually a real idea someone had sometime in the past. In 1985, Aldus Corporation launched its first desktop publishing program: Aldus Pagemaker for Apple Macintosh computers, released in 1987 for PCs running Windows 1.0. Both contained the variant lorem ipsum most common today. </p>
+        </div>
+    </div>
+
+    <!-- locations -->
+    <div class="locations">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="overlay"></div>
+                        <div class="card-image">
+                                <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_2.0,c_scale,f_auto/bauchi.jpg" src="img/bauchi.jpg"  class="cld-responsive">
+                        </div>
+                        <div class="location">
+                            <h4>Bauchi Park</h4>
+                            <p>Relaxed holiday for two.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="overlay"></div>
+                        <div class="card-image">
+                                <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_2.0,c_scale,f_auto/jos.jpg" src="img/jos.jpg" class="cld-responsive">
+                        </div>
+                        <div class="location">
+                            <h4>Jos, Plateau</h4>
+                            <p>Experience Nigeria in the 60s.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="overlay"></div>
+                        <div class="card-image">
+                                <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_2.0,c_scale,f_auto/racecar.jpg" src="img/racecar.jpg"  class="cld-responsive">
+                        </div>
+                        <div class="location">
+                            <h4>Abuja Car Racing</h4>
+                            <p>Get Your Adrenaline Pumping.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button>See more</button>
+        </div>
+    </div>
+
+    <!-- Mosque -->
+    <div class="mosque">
+        <div class="content">
+            <div class="image">
+                <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_2.0,c_scale,f_auto/mosque.jpg" src="img/mosque.jpg" class="cld-responsive">
+            </div>
+            <div class="text">
+                <div class="container">
+                    <h6>On the Blog</h6>
+                    <h1>Hanging out in Borno</h1>
+                </div>
             </div>
         </div>
     </div>
@@ -69,10 +127,10 @@
     integrity="sha256-SOuLUArmo4YXtXONKz+uxIGSKneCJG4x0nVcA0pFzV0="
     crossorigin="anonymous"></script>
     <script
-    src="cloudinary-core-shrinkwrap.js" 
+    src="node_modules/cloudinary-core/cloudinary-core-shrinkwrap.min.js" 
     type="text/javascript">
     </script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
