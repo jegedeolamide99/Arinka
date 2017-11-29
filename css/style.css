@@ -191,6 +191,21 @@ span#toggleMenu-text {
     font-size: 4rem;
     color: #fff;
 }
+.search-form {margin-top: 1.875rem;}
+.search-form label {font-weight: 500; line-height: normal; font-size: 1.5rem; margin-bottom: 1rem;}
+.search-form #search {
+    background: #fff; 
+    border: 3px solid #f2994a; 
+    border-radius: 40px;
+    display: block;
+    width: 100%;
+    padding: 1.5rem .75rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #c3c0c0;
+    text-align: center;
+}
 
 .about {
     position: relative;
@@ -333,6 +348,8 @@ footer a:hover {color: #E36F55; transition: all .2s ease-in-out;}
 }
 @media screen and (max-width:575px) {
     .landing .content .title {font-size: 2.0rem !important;line-height:40px !important;}
+    .search-form label {font-size: 1.25rem; margin-bottom:.5rem;}
+    .search-form #search {padding: .5rem; font-size: 1rem;}
     .about {padding-top: 2.75rem;}
     .about h6 {margin-bottom: .9375rem;}
     .about p {text-align: justify; font-size: 1rem !important;}
