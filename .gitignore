@@ -1,1 +1,14 @@
 package-lock.json
+node_modules/cloudinary-core/.npmignore
+node_modules/cloudinary-core/blank.html
+node_modules/cloudinary-core/bower.json
+node_modules/cloudinary-core/cloudinary-core-shrinkwrap.min.js
+node_modules/cloudinary-core/cloudinary-core-shrinkwrap.min.js.map
+node_modules/cloudinary-core/cloudinary-core.d.ts
+node_modules/cloudinary-core/cloudinary-core.js
+node_modules/cloudinary-core/cloudinary-core.min.js
+node_modules/cloudinary-core/cloudinary-core.min.js.map
+node_modules/cloudinary-core/LICENSE
+node_modules/cloudinary-core/package.json
+node_modules/cloudinary-core/README.md
+lodash/
