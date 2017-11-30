@@ -63,7 +63,12 @@ button {
     -o-transition: all .15s ease-in-out;
     transition: all .15s ease-in-out;
 }
-button:hover {cursor: pointer;}
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(180deg, #eb5757 0%, #FFB657 100%);
+    transition: background .5s ease-in-out;
+    color: #fff
+}
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: .5rem;
@@ -407,6 +412,8 @@ footer a:hover {color: #E36F55; -webkit-transition: all .2s ease-in-out; -o-tran
     .locations {padding: 2.75rem 0rem;}
     .mosque .text h6 {font-size: 1rem;}
     .mosque .text h1 {width: 100% !important;}
+    .sidenav {padding: 3rem 0rem !important;}
+    .sidenav a {font-size: 1rem;}
     
 }
 @media screen and (max-width:767px) {
@@ -416,6 +423,61 @@ footer a:hover {color: #E36F55; -webkit-transition: all .2s ease-in-out; -o-tran
         padding-right: 0;
         padding-left: 0;
     }
+    .menu-center {display: none;}
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        background: -webkit-gradient(linear, left top, left bottom, from(#eb5757), to(#d59152));
+        background: -webkit-linear-gradient(top, #eb5757 0%, #d59152 100%);
+        background: -o-linear-gradient(top, #eb5757 0%, #d59152 100%);
+        background: linear-gradient(180deg, #eb5757 0%, #d59152 100%);
+        overflow-x: hidden;
+        transition: .5s;
+        padding: 5rem 0rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .sidenav a {
+        padding: 1rem .5rem 1rem;
+        font-size: .875rem;
+        color: #fff;
+        text-transform: uppercase;
+        display: block;
+        transition: 0.3s;
+        font-weight: 900;
+    }
+    .sidenav a:hover:not(:first-child) {
+        background: rgba(255, 255, 255, 0.2);
+        transition: all .3s ease-in-out;
+    }
+    .sidenav button {margin: 0 auto;}
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 10%;
+        font-size: 2rem;
+    }
+    .menu-toggler {
+        display: inline-block;
+        padding-top: .3125rem;
+        padding-bottom: .3125rem;
+        margin-right: 1rem;
+        font-size: 2rem;
+        font-weight: 900;
+        line-height: 22px;
+        white-space: nowrap;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    .desktop {display: none;}
 }
 @media screen and (max-width:991px) { 
     .card {height: 18.75rem;}
@@ -458,6 +520,7 @@ footer a:hover {color: #E36F55; -webkit-transition: all .2s ease-in-out; -o-tran
         max-width: 720px;
     }
     .landing {height: 25rem;}
+    .sidenav {display: none;}
 }
 
 @media screen and (min-width:992px) {
