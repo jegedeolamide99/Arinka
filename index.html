@@ -35,20 +35,23 @@
                 <a class="navbar-brand menu-brand" href="#">
                     <img data-src="https://res.cloudinary.com/harryola9/dpr_auto,c_scale,f_auto,q_auto/arinka.png" src="img/logo.png" alt=" Arinka Logo" class="cld-responsive">ARINKA
                 </a>
-                <button class="menu-toggler">
-                    <a href="#">
-                        <i class="fa fa-bars"></i> <i class="fa fa-times"></i>
-                        
-                            <!-- As icons are being used to represent open/close,provide hidden text for screen readers -->
-                        <span id="toggleMenu-text">Toggle Navigation</span>
-                    </a>
-                </button>
                 <ul class="navbar nav menu menu-center">
                     <li><a class="nav-link menu-link" href="#">locations</a></li>
                     <li><a class="nav-link menu-link" href="#">moods</a></li>
                     <li><a class="nav-link menu-link" href="#">blogs</a></li>
                 </ul>
-                <button>LOGIN / SIGNUP</button>
+                <button class="desktop">LOGIN / SIGNUP</button>
+                <!-- Side nav for mobile -->
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
+                    <button>LOGIN / SIGNUP</button>
+                </div>
+                <span class="menu-toggler" onclick="openNav()">&#9776;</span>
+                <!-- Side nav for mobile end-->
             </div>
         </nav>
 
@@ -90,7 +93,7 @@
                         <div class="card">
                             <div class="overlay"></div>
                             <div class="card-image">
-                                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_auto,c_scale,f_auto,q_auto/bauchi1.jpg" src="img/bauchi.jpg" alt="Bauchi" class="cld-responsive">
+                                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,fl_progressive,dpr_auto,c_scale,f_auto,q_auto/bauchi1.jpg" src="img/bauchi.jpg" alt="Bauchi" class="cld-responsive">
                             </div>
                             <div class="location">
                                 <h4>Bauchi Park</h4>
@@ -102,7 +105,7 @@
                         <div class="card">
                             <div class="overlay"></div>
                             <div class="card-image">
-                                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_auto,c_scale,f_auto,q_auto/jos1.jpg" src="img/jos.jpg" alt="Jos" class="cld-responsive">
+                                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,fl_progressive,dpr_auto,c_scale,f_auto,q_auto/jos1.jpg" src="img/jos.jpg" alt="Jos" class="cld-responsive">
                             </div>
                             <div class="location">
                                 <h4>Jos, Plateau</h4>
@@ -114,7 +117,7 @@
                         <div class="card">
                             <div class="overlay"></div>
                             <div class="card-image">
-                                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_auto,c_scale,f_auto,q_auto/racecar1.jpg" src="img/racecar.jpg" alt="Racecar" class="cld-responsive">
+                                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,fl_progressive,dpr_auto,c_scale,f_auto,q_auto/racecar1.jpg" src="img/racecar.jpg" alt="Racecar" class="cld-responsive">
                             </div>
                             <div class="location">
                                 <h4>Abuja Car Racing</h4>
@@ -131,7 +134,7 @@
         <div class="mosque">
             <div class="content">
                 <div class="image">
-                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_2.0,c_scale,f_auto/mosque1.jpg" src="img/mosque.jpg" alt="Mosque" class="cld-responsive">
+                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,fl_progressive,dpr_2.0,c_scale,f_auto,q_auto/mosque1.jpg" src="img/mosque.jpg" alt="Mosque" class="cld-responsive">
                 </div>
                 <div class="text">
                     <div class="container">
@@ -154,14 +157,19 @@
     </footer>
 
     <!-- Scripts -->
-    <script
+    <script async
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-    <script async
-    src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"
-    integrity="sha256-SOuLUArmo4YXtXONKz+uxIGSKneCJG4x0nVcA0pFzV0="
-    crossorigin="anonymous"></script>
     <script async="js/bootstrap.min.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
 </body>
 </html>
