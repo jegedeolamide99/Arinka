@@ -190,9 +190,29 @@ span#toggleMenu-text {
     line-height: 67px;
     font-size: 4rem;
     color: #fff;
+    margin-bottom: 7.5rem;
 }
-.search-form {margin-top: 1.875rem;}
-.search-form label {font-weight: 500; line-height: normal; font-size: 1.5rem; margin-bottom: 1rem;}
+.hero-form {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    margin: -5.875rem auto 0rem;
+    text-align: center;
+}
+.search-form {
+    position:relative;
+    align-self: center;
+    margin: 0 auto;
+}
+.search-form label {font-weight: 500; line-height: normal; font-size: 1.5rem; margin-bottom: 1rem; color: #fff;}
 .search-form #search {
     background: #fff; 
     border: 3px solid #f2994a; 
@@ -347,7 +367,9 @@ footer a:hover {color: #E36F55; transition: all .2s ease-in-out;}
     footer span {width: 100%;}
 }
 @media screen and (max-width:575px) {
-    .landing .content .title {font-size: 2.0rem !important;line-height:40px !important;}
+    .landing {padding-top: 0rem;}
+    .landing .content .title {font-size: 2.0rem !important;line-height:40px !important; margin-bottom:2.5rem;}
+    .hero-form {margin: -3.875rem auto 0rem;}
     .search-form label {font-size: 1.25rem; margin-bottom:.5rem;}
     .search-form #search {padding: .5rem; font-size: 1rem;}
     .about {padding-top: 2.75rem;}
@@ -403,6 +425,7 @@ footer a:hover {color: #E36F55; transition: all .2s ease-in-out;}
     .container {
         max-width: 720px;
     }
+    .landing {height: 25rem;}
 }
 
 @media screen and (min-width:992px) {
