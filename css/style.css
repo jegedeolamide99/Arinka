@@ -19,6 +19,7 @@ body {
     background-color: #fff;
     overflow-x: inherit;
 }
+header,nav,main,footer {display: block;}
 a {
     color: #fff;
     text-decoration: none;
