@@ -12,31 +12,38 @@
     <!-- Google font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
   
 </head>
 <body>
     <header class="hero" role="banner">
-        <nav class="navbar navbar-expand-md menu menu-expand" role="navigation">
-            <div class="container-fluid">
-                <a class="navbar-brand menu-brand" href="#">
-                    <img data-src="https://res.cloudinary.com/harryola9/dpr_auto,c_scale,f_auto,q_auto/arinka.png" src="img/logo.png" alt=" Arinka Logo" class="cld-responsive">ARINKA
+        <nav class="menu menu-expand" role="navigation">
+            <div class="container-full">
+                <a class="menu-brand wow fadeInLeft" data-wow-duration="2s" href="#">
+                    <img data-src="https://res.cloudinary.com/harryola9/dpr_auto,c_scale,f_auto,q_auto/arinka.png" src="img/logo.png" alt=" Arinka Logo" class="cld-responsive wow fadeInUp" data-wow-duration="1s" data-wow-iteration="infinite">ARINKA
                 </a>
-                <ul class="navbar nav menu menu-center">
-                    <li><a class="nav-link menu-link" href="#">locations</a></li>
-                    <li><a class="nav-link menu-link" href="#">moods</a></li>
-                    <li><a class="nav-link menu-link" href="#">blogs</a></li>
+                <ul class="menu menu-center wow fadeIn" data-wow-duration="2s" >
+                    <li><a class="menu-link" href="#">locations</a></li>
+                    <li><a class="menu-link" href="#">moods</a></li>
+                    <li><a class="menu-link" href="#">blogs</a></li>
                 </ul>
-                <button class="desktop">LOGIN / SIGNUP</button>
+                <button class="desktop wow fadeInRight" data-wow-duration="2s" >LOGIN / SIGNUP</button>
                 <!-- Side nav for mobile -->
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
+                    <a href="#">locations</a>
+                    <a href="#">moods</a>
+                    <a href="#">blogs</a>
                     <button>LOGIN / SIGNUP</button>
                 </div>
-                <span class="menu-toggler" onclick="openNav()">&#9776;</span>
+                <a href="javascript:void(0)" class="menu-toggler wow fadeInRight" data-wow-duration="2s" onclick="openNav()">
+                    <svg width="32" height="32" viewBox="0 0 14 10" class="fill" fill="#ffffff" aria-hidden="true">
+                        <rect width="14" height="2"></rect>
+                        <rect width="14" height="2" y="4"></rect>
+                        <rect width="14" height="2" y="8"></rect>
+                    </svg>
+                    <span class="sr-only">Toggle Navigation</span>
+                </a>
                 <!-- Side nav for mobile end-->
             </div>
         </nav>
@@ -44,7 +51,7 @@
         <div class="landing">
             <div class="container">
                 <div class="content">
-                    <h2 class="title">Discover the best places to  travel to in Nigeria</h2>
+                    <h2 class="title wow fadeInUp" data-wow-duration="2s">Discover the best places to  travel to in Nigeria</h2>
                 </div>
             </div>
         </div>
@@ -54,17 +61,17 @@
     <main role="main">
         <div class="hero-form">
             <div class="container">
-                <form class="search-form">
+                <form class="search-form wow fadeInUp" data-wow-duration="2s" >
                     <fieldset>
                         <label for="search">What are you looking for</label>
-                        <input id="search" class="form-control" placeholder="e.g. educational,outdoors, relaxed "type="text">
+                        <input id="search" placeholder="e.g. educational, outdoors, relaxed" type="text">
                     </fieldset>
                 </form>
             </div>
         </div>
         
         <!-- about us -->
-        <div class="about">
+        <div class="about wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
             <div class="container">
                 <h6>About us</h6>
                 <p>Arinka is a fictional company, but actually a real idea someone had sometime in the past. In 1985, Aldus Corporation launched its first desktop publishing program: Aldus Pagemaker for Apple Macintosh computers, released in 1987 for PCs running Windows 1.0. Both contained the variant lorem ipsum most common today. </p>
@@ -75,7 +82,7 @@
         <div class="locations">
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="column wow fadeInLeft" data-wow-duration="2s" data-wow-offset="50">
                         <div class="card">
                             <div class="overlay"></div>
                             <div class="card-image">
@@ -87,7 +94,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="column wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
                         <div class="card">
                             <div class="overlay"></div>
                             <div class="card-image">
@@ -99,7 +106,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="column wow fadeInRight"  data-wow-duration="4s" data-wow-offset="50">
                         <div class="card">
                             <div class="overlay"></div>
                             <div class="card-image">
@@ -112,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <button>See more</button>
+                <button class="wow fadeIn" data-wow-duration="1s">See more</button>
             </div>
         </div>
     
@@ -124,8 +131,8 @@
                 </div>
                 <div class="text">
                     <div class="container">
-                        <h6>On the Blog</h6>
-                        <h1>Hanging out in Borno</h1>
+                        <h6 class=" wow fadeInLeft" data-wow-duration="3s" data-wow-offset="50">On the Blog</h6>
+                        <h1 class=" wow fadeInLeft" data-wow-duration="2s" data-wow-offset="50">Hanging out in Borno</h1>
                     </div>
                 </div>
             </div>
@@ -134,7 +141,7 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container-fluid">
+        <div class="container-full">
             <div class="row">
                 <span><a href="#">Terms and Conditions</a></span>
                 <span>Copyright Frontstack, 2017</span>
@@ -152,7 +159,8 @@
         /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License and Cloudinary */
         var cl=cloudinary.Cloudinary["new"]({cloud_name:"harryola9"});cl.config({responsive_use_breakpoints:"resize"}),cl.responsive(),!function(e){"use strict";e.loadCSS||(e.loadCSS=function(){});var t=loadCSS.relpreload={};if(t.support=function(){var t;try{t=e.document.createElement("link").relList.supports("preload")}catch(a){t=!1}return function(){return t}}(),t.bindMediaToggle=function(e){function t(){e.media=a}var a=e.media||"all";e.addEventListener?e.addEventListener("load",t):e.attachEvent&&e.attachEvent("onload",t),setTimeout(function(){e.rel="stylesheet",e.media="only x"}),setTimeout(t,3e3)},t.poly=function(){if(!t.support())for(var a=e.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),t.bindMediaToggle(o))}},!t.support()){t.poly();var a=e.setInterval(t.poly,500);e.addEventListener?e.addEventListener("load",function(){t.poly(),e.clearInterval(a)}):e.attachEvent&&e.attachEvent("onload",function(){t.poly(),e.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:e.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
     </script>
-    <script async>
+    <script src="js/wow.min.js"></script>
+    <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "100%";
         }
@@ -160,6 +168,7 @@
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+        new WOW().init();
     </script>
 </body>
 </html>
