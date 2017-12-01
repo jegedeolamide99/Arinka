@@ -78,7 +78,19 @@ img {
     vertical-align: middle;
     border-style: none;
 }
-
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
 .hero {
     width: 100%;
     height:100%;
@@ -237,6 +249,12 @@ span#toggleMenu-text {
         align-self: center;
     margin: 0 auto;
 }
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
 .search-form label {font-weight: 500; line-height: normal; font-size: 1.5rem; margin-bottom: 1rem; color: #fff;}
 .search-form #search {
     background: #fff; 
@@ -312,6 +330,13 @@ span#toggleMenu-text {
     margin: 0 auto;
     padding: 5.625rem 0rem;
 }
+.col-4 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 .cld-responsive {
     max-width: 100%;
     height: inherit;
@@ -335,6 +360,7 @@ span#toggleMenu-text {
     background-color: #fff;
     background-clip: border-box;
     border-radius: .3125rem;
+    border: 1px solid rgba(0,0,0,.125);
     height: 25rem;
 }
 .overlay {
