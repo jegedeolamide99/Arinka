@@ -13,3 +13,5 @@ node_modules/cloudinary-core/package.json
 node_modules/cloudinary-core/README.md
 lodash/
 js/script.js
+css/animate.min.css
+/node_modules
