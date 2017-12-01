@@ -148,6 +148,10 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>  
     <script src="cloudinary-core-shrinkwrap.js"></script>
+    <script>
+        /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License and Cloudinary */
+        var cl=cloudinary.Cloudinary["new"]({cloud_name:"harryola9"});cl.config({responsive_use_breakpoints:"resize"}),cl.responsive(),!function(e){"use strict";e.loadCSS||(e.loadCSS=function(){});var t=loadCSS.relpreload={};if(t.support=function(){var t;try{t=e.document.createElement("link").relList.supports("preload")}catch(a){t=!1}return function(){return t}}(),t.bindMediaToggle=function(e){function t(){e.media=a}var a=e.media||"all";e.addEventListener?e.addEventListener("load",t):e.attachEvent&&e.attachEvent("onload",t),setTimeout(function(){e.rel="stylesheet",e.media="only x"}),setTimeout(t,3e3)},t.poly=function(){if(!t.support())for(var a=e.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),t.bindMediaToggle(o))}},!t.support()){t.poly();var a=e.setInterval(t.poly,500);e.addEventListener?e.addEventListener("load",function(){t.poly(),e.clearInterval(a)}):e.attachEvent&&e.attachEvent("onload",function(){t.poly(),e.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:e.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+    </script>
     <script async>
         function openNav() {
             document.getElementById("mySidenav").style.width = "100%";
