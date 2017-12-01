@@ -27,7 +27,18 @@ a {
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
+    position: relative;
+    text-decoration: none;
 }
+a:before, a:after{
+    content: '';
+    position: absolute;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    -o-transition: transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+  }
 a:hover {
     color: #fff;
     text-decoration: none;
@@ -65,7 +76,12 @@ button {
 }
 button:hover {
     cursor: pointer;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eb5757), to(#FFB657));
+    background: -webkit-linear-gradient(top, #eb5757 0%, #FFB657 100%);
+    background: -o-linear-gradient(top, #eb5757 0%, #FFB657 100%);
     background: linear-gradient(180deg, #eb5757 0%, #FFB657 100%);
+    -webkit-transition: background .5s ease-in-out;
+    -o-transition: background .5s ease-in-out;
     transition: background .5s ease-in-out;
     color: #fff
 }
@@ -77,6 +93,36 @@ h1, h2, h3, h4, h5, h6 {
 img {
     vertical-align: middle;
     border-style: none;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+}
+img:before {  
+    content: " ";
+    display: block;
+  
+    position: absolute;
+    top: -10px;
+    left: 0;
+    height: calc(100% + 10px);
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    border: 2px dotted rgb(200, 200, 200);
+    border-radius: 5px;
+}
+img:after {  
+    content: "\01F517 " " Broken Image of " attr(alt);
+    display: block;
+    font-size: 0.9375rem;
+    font-style: normal;
+    color: rgb(100, 100, 100);
+  
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
 label {
     display: inline-block;
@@ -156,12 +202,13 @@ button, input, optgroup, select, textarea {
     font-weight: 900;
     line-height: 22px;
     white-space: nowrap;
-    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 .menu-brand:focus, .menu-brand:hover {
     text-decoration: none;
 }
-.menu-brand img {margin-right:.75rem; animation-direction: alternate;}
+.menu-brand img {margin-right:.75rem; -webkit-animation-direction: alternate; animation-direction: alternate;}
 .menu-center {
     display: -ms-flexbox;
     display: -webkit-box;
@@ -179,6 +226,21 @@ button, input, optgroup, select, textarea {
     font-weight: 700;
     text-transform: uppercase;
 }
+.menu-link:before {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+}
+.menu-link:hover:before {
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
+  }
 .menu button {
     font-weight: 700;
     font-size: .875rem;
@@ -419,6 +481,14 @@ footer span, footer a {font-weight: 700; line-height: normal; font-size: .875rem
 footer a:hover {color: #E36F55; -webkit-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
 
 /* Animations */
+@-webkit-keyframes "fadeIn" {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 @keyframes "fadeIn" {
 	from {
 		opacity: 0;
@@ -429,72 +499,97 @@ footer a:hover {color: #E36F55; -webkit-transition: all .2s ease-in-out; -o-tran
 }
 
 .fadeIn {
-	animation-name: fadeIn
+	-webkit-animation-name: fadeIn;
+	        animation-name: fadeIn
+}
+@-webkit-keyframes "fadeInUp" {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		        transform: none;
+	}
 }
 @keyframes "fadeInUp" {
 	from {
 		opacity: 0;
-		transform: translate3d(0, 100%, 0);
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
 	}
 	to {
 		opacity: 1;
-		transform: none;
+		-webkit-transform: none;
+		        transform: none;
 	}
 }
 
 .fadeInUp {
-	animation-name: fadeInUp
+	-webkit-animation-name: fadeInUp;
+	        animation-name: fadeInUp
+}
+@-webkit-keyframes "fadeInLeft" {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		        transform: translate3d(-100%, 0, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		        transform: none;
+	}
 }
 @keyframes "fadeInLeft" {
 	from {
 		opacity: 0;
-		transform: translate3d(-100%, 0, 0);
+		-webkit-transform: translate3d(-100%, 0, 0);
+		        transform: translate3d(-100%, 0, 0);
 	}
 	to {
 		opacity: 1;
-		transform: none;
+		-webkit-transform: none;
+		        transform: none;
 	}
 }
 
 .fadeInLeft {
-	animation-name: fadeInLeft
+	-webkit-animation-name: fadeInLeft;
+	        animation-name: fadeInLeft
+}
+@-webkit-keyframes "fadeInRight" {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		        transform: translate3d(100%, 0, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		        transform: none;
+	}
 }
 @keyframes "fadeInRight" {
 	from {
 		opacity: 0;
-		transform: translate3d(100%, 0, 0);
+		-webkit-transform: translate3d(100%, 0, 0);
+		        transform: translate3d(100%, 0, 0);
 	}
 	to {
 		opacity: 1;
-		transform: none;
+		-webkit-transform: none;
+		        transform: none;
 	}
 }
 
 .fadeInRight {
-	animation-name: fadeInRight
-}
-@keyframes "bounce" {
-	from, 20%, 53%, 80%, to {
-		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-		transform: translate3d(0, 0, 0);
-	}
-	40%, 43% {
-		animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-		transform: translate3d(0, -30px, 0);
-	}
-	70% {
-		animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-		transform: translate3d(0, -15px, 0);
-	}
-	90% {
-		transform: translate3d(0, -4px, 0);
-	}
+	-webkit-animation-name: fadeInRight;
+	        animation-name: fadeInRight
 }
 
-.bounce {
-	animation-name: bounce;
-	transform-origin: center bottom
-}
 /* Media Queries */
 @media screen and (max-width:359px) {
     .location h4 {font-size: 1.75rem;}
@@ -513,6 +608,7 @@ footer a:hover {color: #E36F55; -webkit-transition: all .2s ease-in-out; -o-tran
     .about p {text-align: justify; font-size: 1rem !important;}
     .container {padding: 0 30px;}
     .locations {padding: 2.75rem 0rem;}
+    .mosque .content .text {top: 20%;}
     .mosque .text h6 {font-size: 1rem;}
     .mosque .text h1 {width: 100% !important;}
     .sidenav {padding: 3rem 0rem !important;}
@@ -539,13 +635,23 @@ footer a:hover {color: #E36F55; -webkit-transition: all .2s ease-in-out; -o-tran
         background: -o-linear-gradient(top, #eb5757 0%, #d59152 100%);
         background: linear-gradient(180deg, #eb5757 0%, #d59152 100%);
         overflow-x: hidden;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
         transition: .5s;
         padding: 5rem 0rem;
         text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
     }
     .sidenav a {
         padding: 1rem .5rem 1rem;
@@ -553,12 +659,39 @@ footer a:hover {color: #E36F55; -webkit-transition: all .2s ease-in-out; -o-tran
         color: #fff;
         text-transform: uppercase;
         display: block;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
         font-weight: 900;
     }
     .sidenav a:hover:not(:first-child) {
         background: rgba(255, 255, 255, 0.2);
+        -webkit-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
+    }
+    .mobile-link:before, .mobile-link:after {
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+    }
+    .mobile-link:before {
+        bottom: 0;
+        -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
+    .mobile-link:after {
+        top: 0;
+        -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+                transform: translateX(100%);
+    }
+    .mobile-link:hover:before, .mobile-link:hover:after {
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
     }
     .sidenav button {margin: 0 auto;}
     .sidenav .closebtn {
@@ -568,8 +701,8 @@ footer a:hover {color: #E36F55; -webkit-transition: all .2s ease-in-out; -o-tran
         font-size: 2rem;
     }
     .sidenav .closebtn rect:nth-child(1) {display: none;}
-    .sidenav .closebtn rect:nth-child(2) {transform: rotate(-45deg);}
-    .sidenav .closebtn rect:nth-child(2) {transform: rotate(45deg);}
+    .sidenav .closebtn rect:nth-child(2) {-webkit-transform: rotate(-45deg);-ms-transform: rotate(-45deg);transform: rotate(-45deg);}
+    .sidenav .closebtn rect:nth-child(2) {-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);}
     .menu-toggler {
         display: inline-block;
         padding-top: .3125rem;
