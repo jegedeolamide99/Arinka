@@ -1,174 +1,136 @@
 <!DOCTYPE html>
-<html lang="en" dir="LTR">
+<html dir="ltr" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Arinka</title>
-    <meta name="description" content="Markup by Jegede Olamide as a submission for Fronstack.io responsive site challenge ">
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="img/logo.png">
-    <!-- Google font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
-  
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<title>Arinka</title>
+	<meta content="Markup by Jegede Olamide as a submission for Fronstack.io responsive site challenge" name="description">
+	<link href="img/logo.png" rel="icon" type="image/png"><!-- Apple Touch Icon -->
+	<link href="img/logo.png" rel="apple-touch-icon"><!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
 </head>
 <body>
-    <header class="hero" role="banner">
-        <nav class="menu menu-expand" role="navigation">
-            <div class="container-full">
-                <a class="menu-brand wow fadeInLeft" data-wow-duration="2s" href="#">
-                    <img data-src="https://res.cloudinary.com/harryola9/dpr_auto,c_scale,f_auto,q_auto/arinka.png" src="img/logo.png" alt=" Arinka Logo" class="cld-responsive wow fadeInUp" data-wow-duration="1s" data-wow-iteration="infinite">ARINKA
-                </a>
-                <ul class="menu menu-center wow fadeIn" data-wow-duration="2s" >
-                    <li><a class="menu-link" href="#">locations</a></li>
-                    <li><a class="menu-link" href="#">moods</a></li>
-                    <li><a class="menu-link" href="#">blogs</a></li>
-                </ul>
-                <button class="desktop wow fadeInRight" data-wow-duration="2s" >LOGIN / SIGNUP</button>
-                <!-- Side nav for mobile -->
-                <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">locations</a>
-                    <a href="#">moods</a>
-                    <a href="#">blogs</a>
-                    <button>LOGIN / SIGNUP</button>
-                </div>
-                <a href="javascript:void(0)" class="menu-toggler wow fadeInRight" data-wow-duration="2s" onclick="openNav()">
-                    <svg width="32" height="32" viewBox="0 0 14 10" class="fill" fill="#ffffff" aria-hidden="true">
-                        <rect width="14" height="2"></rect>
-                        <rect width="14" height="2" y="4"></rect>
-                        <rect width="14" height="2" y="8"></rect>
-                    </svg>
-                    <span class="sr-only">Toggle Navigation</span>
-                </a>
-                <!-- Side nav for mobile end-->
-            </div>
-        </nav>
-
-        <div class="landing">
-            <div class="container">
-                <div class="content">
-                    <h2 class="title wow fadeInUp" data-wow-duration="2s">Discover the best places to  travel to in Nigeria</h2>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main -->
-    <main role="main">
-        <div class="hero-form">
-            <div class="container">
-                <form class="search-form wow fadeInUp" data-wow-duration="2s" >
-                    <fieldset>
-                        <label for="search">What are you looking for</label>
-                        <input id="search" placeholder="e.g. educational, outdoors, relaxed" type="text">
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-        
-        <!-- about us -->
-        <div class="about wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
-            <div class="container">
-                <h6>About us</h6>
-                <p>Arinka is a fictional company, but actually a real idea someone had sometime in the past. In 1985, Aldus Corporation launched its first desktop publishing program: Aldus Pagemaker for Apple Macintosh computers, released in 1987 for PCs running Windows 1.0. Both contained the variant lorem ipsum most common today. </p>
-            </div>
-        </div>
-    
-        <!-- locations -->
-        <div class="locations">
-            <div class="container">
-                <div class="row">
-                    <div class="column wow fadeInLeft" data-wow-duration="2s" data-wow-offset="50">
-                        <div class="card">
-                            <div class="overlay"></div>
-                            <div class="card-image">
-                                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_auto,c_scale,f_auto,q_auto/bauchi1.jpg" src="img/bauchi.jpg" alt="Bauchi" class="cld-responsive">
-                            </div>
-                            <div class="location">
-                                <h4>Bauchi Park</h4>
-                                <p>Relaxed holiday for two.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
-                        <div class="card">
-                            <div class="overlay"></div>
-                            <div class="card-image">
-                                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_auto,c_scale,f_auto,q_auto/jos1.jpg" src="img/jos.jpg" alt="Jos" class="cld-responsive">
-                            </div>
-                            <div class="location">
-                                <h4>Jos, Plateau</h4>
-                                <p>Experience Nigeria in the 60s.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column wow fadeInRight"  data-wow-duration="4s" data-wow-offset="50">
-                        <div class="card">
-                            <div class="overlay"></div>
-                            <div class="card-image">
-                                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_auto,c_scale,f_auto,q_auto/racecar1.jpg" src="img/racecar.jpg" alt="Racecar" class="cld-responsive">
-                            </div>
-                            <div class="location">
-                                <h4>Abuja Car Racing</h4>
-                                <p>Get Your Adrenaline Pumping.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="wow fadeIn" data-wow-duration="1s">See more</button>
-            </div>
-        </div>
-    
-        <!-- Mosque -->
-        <div class="mosque">
-            <div class="content">
-                <div class="image">
-                    <img data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_2.0,c_scale,f_auto,q_auto/mosque1.jpg" src="img/mosque.jpg" alt="Mosque" class="cld-responsive">
-                </div>
-                <div class="text">
-                    <div class="container">
-                        <h6 class=" wow fadeInLeft" data-wow-duration="3s" data-wow-offset="50">On the Blog</h6>
-                        <h1 class=" wow fadeInLeft" data-wow-duration="2s" data-wow-offset="50">Hanging out in Borno</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container-full">
-            <div class="row">
-                <span><a href="#">Terms and Conditions</a></span>
-                <span>Copyright Frontstack, 2017</span>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    
-    <script async src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>  
-    <script src="cloudinary-core-shrinkwrap.js"></script>
-    <script>
-        /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License and Cloudinary */
-        var cl=cloudinary.Cloudinary["new"]({cloud_name:"harryola9"});cl.config({responsive_use_breakpoints:"resize"}),cl.responsive(),!function(e){"use strict";e.loadCSS||(e.loadCSS=function(){});var t=loadCSS.relpreload={};if(t.support=function(){var t;try{t=e.document.createElement("link").relList.supports("preload")}catch(a){t=!1}return function(){return t}}(),t.bindMediaToggle=function(e){function t(){e.media=a}var a=e.media||"all";e.addEventListener?e.addEventListener("load",t):e.attachEvent&&e.attachEvent("onload",t),setTimeout(function(){e.rel="stylesheet",e.media="only x"}),setTimeout(t,3e3)},t.poly=function(){if(!t.support())for(var a=e.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),t.bindMediaToggle(o))}},!t.support()){t.poly();var a=e.setInterval(t.poly,500);e.addEventListener?e.addEventListener("load",function(){t.poly(),e.clearInterval(a)}):e.attachEvent&&e.attachEvent("onload",function(){t.poly(),e.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:e.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
-    </script>
-    <script src="js/wow.min.js"></script>
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "100%";
-        }
-        
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-        new WOW().init();
-    </script>
+	<header class="hero" role="banner">
+		<nav class="menu menu-expand" role="navigation">
+			<div class="container-full">
+				<a class="menu-brand wow fadeInLeft" data-wow-duration="2s" href="#"><img alt=" Arinka Logo" class="cld-responsive wow fadeInUp" data-src="https://res.cloudinary.com/harryola9/dpr_auto,c_scale,f_auto,q_auto/arinka.png" data-wow-duration="1s" data-wow-iteration="infinite" src="img/logo.png">ARINKA</a>
+				<ul class="menu menu-center wow fadeIn" data-wow-duration="2s">
+					<li>
+						<a class="menu-link" href="#">locations</a>
+					</li>
+					<li>
+						<a class="menu-link" href="#">moods</a>
+					</li>
+					<li>
+						<a class="menu-link" href="#">blogs</a>
+					</li>
+				</ul><button class="desktop wow fadeInRight" data-wow-duration="2s">LOGIN / SIGNUP</button> <!-- Side nav for mobile -->
+				<div class="sidenav" id="mySidenav">
+					<a class="closebtn" href="javascript:void(0)" onclick="closeNav()"><svg height="32px" viewbox="0 0 16 16" width="32px">
+					<g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+						<g class="fill" fill="#ffffff" transform="translate(-1045.000000, -29.000000)">
+							<path d="M1054.19239,36.7781746 L1059.85504,31.1155243 C1060.2344,30.7361632 1060.23977,30.0976311 1059.84924,29.7071068 C1059.456,29.3138598 1058.82815,29.3139875 1058.44082,29.7013107 L1052.77817,35.363961 L1047.11552,29.7013107 C1046.73616,29.3219497 1046.09763,29.3165825 1045.70711,29.7071068 C1045.31386,30.1003537 1045.31399,30.7282011 1045.70131,31.1155243 L1051.36396,36.7781746 L1045.70131,42.4408249 C1045.32195,42.820186 1045.31658,43.4587181 1045.70711,43.8492424 C1046.10035,44.2424894 1046.7282,44.2423617 1047.11552,43.8550385 L1052.77817,38.1923882 L1058.44082,43.8550385 C1058.82019,44.2343995 1059.45872,44.2397667 1059.84924,43.8492424 C1060.24249,43.4559954 1060.24236,42.8281481 1059.85504,42.4408249 L1054.19239,36.7781746 Z"></path>
+						</g>
+					</g></svg> <span class="sr-only">Close Navigation</span></a> <a class="mobile-link" href="#">locations</a> <a class="mobile-link" href="#">moods</a> <a class="mobile-link" href="#">blogs</a> <button>LOGIN / SIGNUP</button>
+				</div><a class="menu-toggler wow fadeInRight" data-wow-duration="2s" href="javascript:void(0)" onclick="openNav()"><svg aria-hidden="true" class="fill" height="32" viewbox="0 0 14 10" width="32">
+				<rect height="2" width="14"></rect>
+				<rect height="2" width="14" y="4"></rect>
+				<rect height="2" width="14" y="8"></rect></svg> <span class="sr-only">Toggle Navigation</span></a> <!-- Side nav for mobile end-->
+			</div>
+		</nav>
+		<div class="landing">
+			<div class="container">
+				<div class="content">
+					<h2 class="title wow fadeInUp" data-wow-duration="2s">Discover the best places to travel to in Nigeria</h2>
+				</div>
+			</div>
+		</div>
+	</header><!-- Main -->
+	<main role="main">
+		<div class="hero-form">
+			<div class="container">
+				<form class="search-form wow fadeInUp" data-wow-duration="2s">
+					<fieldset>
+						<label for="search">What are you looking for</label> <input id="search" placeholder="e.g. educational, outdoors, relaxed" type="text">
+					</fieldset>
+				</form>
+			</div>
+		</div><!-- about us -->
+		<div class="about wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
+			<div class="container">
+				<h6>About us</h6>
+				<p>Arinka is a fictional company, but actually a real idea someone had sometime in the past. In 1985, Aldus Corporation launched its first desktop publishing program: Aldus Pagemaker for Apple Macintosh computers, released in 1987 for PCs running Windows 1.0. Both contained the variant lorem ipsum most common today.</p>
+			</div>
+		</div><!-- locations -->
+		<div class="locations">
+			<div class="container">
+				<div class="row">
+					<div class="column wow fadeInLeft" data-wow-duration="2s" data-wow-offset="50">
+						<div class="card">
+							<div class="overlay"></div>
+							<div class="card-image"><img alt="Bauchi" class="cld-responsive" data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_auto,c_scale,f_auto,q_auto/bauchi1.jpg" src="img/bauchi.jpg"></div>
+							<div class="location">
+								<h4>Bauchi Park</h4>
+								<p>Relaxed holiday for two.</p>
+							</div>
+						</div>
+					</div>
+					<div class="column wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
+						<div class="card">
+							<div class="overlay"></div>
+							<div class="card-image"><img alt="Jos" class="cld-responsive" data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_auto,c_scale,f_auto,q_auto/jos1.jpg" src="img/jos.jpg"></div>
+							<div class="location">
+								<h4>Jos, Plateau</h4>
+								<p>Experience Nigeria in the 60s.</p>
+							</div>
+						</div>
+					</div>
+					<div class="column wow fadeInRight" data-wow-duration="4s" data-wow-offset="50">
+						<div class="card">
+							<div class="overlay"></div>
+							<div class="card-image"><img alt="Racecar" class="cld-responsive" data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_auto,c_scale,f_auto,q_auto/racecar1.jpg" src="img/racecar.jpg"></div>
+							<div class="location">
+								<h4>Abuja Car Racing</h4>
+								<p>Get Your Adrenaline Pumping.</p>
+							</div>
+						</div>
+					</div>
+				</div><button class="wow fadeIn" data-wow-duration="1s">See more</button>
+			</div>
+		</div><!-- Mosque -->
+		<div class="mosque">
+			<div class="content">
+				<div class="image"><img alt="Mosque" class="cld-responsive" data-src="https://res.cloudinary.com/harryola9/w_auto,dpr_2.0,c_scale,f_auto,q_auto/mosque1.jpg" src="img/mosque.jpg"></div>
+				<div class="text">
+					<div class="container">
+						<h6 class=" wow fadeInLeft" data-wow-duration="3s" data-wow-offset="50">On the Blog</h6>
+						<h1 class=" wow fadeInLeft" data-wow-duration="2s" data-wow-offset="50">Hanging out in Borno</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main><!-- Footer -->
+	<footer>
+		<div class="container-full">
+			<div class="row">
+				<span><a href="#">Terms and Conditions</a></span> <span>Copyright Frontstack, 2017</span>
+			</div>
+		</div>
+	</footer><!-- Scripts -->
+	<script async src="https://code.jquery.com/jquery-3.2.1.min.js">
+	</script> 
+	<script src="cloudinary-core-shrinkwrap.js">
+	</script> 
+	<script>
+	          function openNav(){document.getElementById("mySidenav").style.width="100%"}function closeNav(){document.getElementById("mySidenav").style.width="0"}var cl=cloudinary.Cloudinary["new"]({cloud_name:"harryola9"});cl.config({responsive_use_breakpoints:"resize"}),cl.responsive(),!function(e){"use strict";e.loadCSS||(e.loadCSS=function(){});var t=loadCSS.relpreload={};if(t.support=function(){var t;try{t=e.document.createElement("link").relList.supports("preload")}catch(n){t=!1}return function(){return t}}(),t.bindMediaToggle=function(e){function t(){e.media=n}var n=e.media||"all";e.addEventListener?e.addEventListener("load",t):e.attachEvent&&e.attachEvent("onload",t),setTimeout(function(){e.rel="stylesheet",e.media="only x"}),setTimeout(t,3e3)},t.poly=function(){if(!t.support())for(var n=e.document.getElementsByTagName("link"),a=0;a<n.length;a++){var o=n[a];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),t.bindMediaToggle(o))}},!t.support()){t.poly();var n=e.setInterval(t.poly,500);e.addEventListener?e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}):e.attachEvent&&e.attachEvent("onload",function(){t.poly(),e.clearInterval(n)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:e.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+	</script> 
+	<script src="js/wow.min.js">
+	</script> 
+	<script>
+	          new WOW().init();
+	</script>
 </body>
 </html>
